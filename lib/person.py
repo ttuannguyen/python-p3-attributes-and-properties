@@ -17,8 +17,9 @@ APPROVED_JOBS = [
 
 class Person:
     
-    def __init__(self, name="Trenton"):
+    def __init__(self, job, name="Lee"):
         self.name = name
+        self.job = job
     
     def get_name(self):
         print('Retrieving name.')
@@ -30,6 +31,19 @@ class Person:
     
     name = property(get_name, set_name)
 
+    def get_job(self):
+        print("Retrieving job.")
+        return self.__init__job
 
-person = Person(job="programmer")
+    def set_job(self, job):
+        if job in APPROVED_JOBS: 
+            print(f"Setting job to { job }")
+            self._job = job
+        else:
+            print("Job must be in list of approved jobs.")
 
+    job = property(get_job, set_job)
+
+
+person = Person(job="Marketing")
+person.job = "Data Science"
