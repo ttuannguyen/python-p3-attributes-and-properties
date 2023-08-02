@@ -37,7 +37,7 @@ class Human:
     def get_age(self): 
         # compiled by the property fuction and prints the below when we access age through dot notation or an attr() function 
         print("Retrieving age.")
-        return self._age
+        return self._age 
 
     def set_age(self, age):
         # compiled by the property fuction and prints the below when we change our human's age 
@@ -53,4 +53,4 @@ guido = Human(age=67)
 guido.age = 0 
 guido.age = False
 guido.age = 66
-guido.age
+print(guido.age)

@@ -16,4 +16,20 @@ APPROVED_JOBS = [
 ]
 
 class Person:
-    pass
+    
+    def __init__(self, name="Trenton"):
+        self.name = name
+    
+    def get_name(self):
+        print('Retrieving name.')
+        return self._name
+
+    def set_name(self, name):
+        print(f"Setting name to { name }")
+        self._name = name
+    
+    name = property(get_name, set_name)
+
+
+person = Person(job="programmer")
+

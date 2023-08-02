@@ -21,9 +21,9 @@ class Dog:
         return self._name
 
     def set_name(self, name):
-        if(type(name) in (str)) and (0 <= len(name) <= 25):
+        if isinstance(name, str) and 0 <= len(name) <= 25:
             print(f"Setting name to { name}")
-            self.name = name
+            self._name = name
         else:
             print("Name must be string between 1 and 25 characters.")
 
@@ -31,4 +31,5 @@ class Dog:
 
 
 doggo = Dog(name="pepsi")    
-# doggo.name = 1
+doggo.name = "cutie"
+# print(doggo.name)
